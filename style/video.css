@@ -1,0 +1,141 @@
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+
+@media (max-width: 870px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media (min-width: 879px) and (max-width: 1124px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1125px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 99;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.video-time{
+    position: absolute;
+    background-color: black;
+    color: white;
+    right: 5px;
+    bottom: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channel-picture{
+    position: relative;
+    display: inline-block;
+}
+
+.channel-picture:hover .channel-tool-tip{
+    opacity: 1;
+}
+
+.profile-picture {
+    width: 36px;
+    border-radius: 25px;
+}
+
+.channel-tool-tip{
+    position: absolute;
+    background-color: white;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 55px;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.profile-picture-tip{
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+
+.channel-info{
+    flex: 1;
+    white-space: nowrap;
+}
+
+.profile-name{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.subs-count{
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+}
+
+.video-info a{
+    text-decoration: none;
+}
+
+.video-title {
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+@media (min-width: 1000px){
+    .video-title{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .video-author,
+    .video-stats{
+        font-size: 14px;
+    }
+}
